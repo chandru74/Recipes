@@ -1,5 +1,6 @@
 # Recipes
 
+# Local setup guide
 Clone the repositry to local 
 And do 'npm install'
 and do 'ng serve'
