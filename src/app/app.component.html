@@ -1,0 +1,17 @@
+<div>
+    <input class="input" type="text" name="item" [(ngModel)]='item' (keyup.enter)='getData()' placeholder="Enter Recipe">
+</div>
+
+<div *ngIf="!countFlag">
+    No recipe found!
+</div>
+
+<div class="flex-container">
+    
+    <div class="flex-item" *ngFor="let recipe of recipes">
+        <h3 style="margin: 5px auto; height: 20%; text-align: center;">{{recipe['title']}}</h3>
+        <img [src]="recipe['image_url']" alt="Receipe Image" width="100%" height="200px">
+        <label >Publisher: </label>
+        <a [href]="recipe['publisher_url']" target="_blank">{{recipe['publisher']}}</a>
+    </div>
+</div>
